@@ -4,7 +4,11 @@
   <title>Agile Toolbox</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -17,10 +21,11 @@
   position: relative;
   width: 160px;
   height: 70px;
-  float: left;
+<!--  float: left;-->
   font-size: 1.5em;
   font-weight: bold;
-  margin: 30px 10px 10px -90px;
+<!--  margin: 30px 10px 10px -90px;-->
+  margin: 30px;
   background-color: #fcf59b;
   border-radius: 0px 10px 250px / 0 200px 55px 250px;
   -webkit-box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.3);
@@ -73,13 +78,44 @@
   transform: skew(-55deg,10deg);
 }
 
+.white-board
+  background-color: #f2f2f2
+  position: relative
+  width: 80%
+  height: 80%
+  border-radius: 5px
+  border: 10px solid $wb-bdr-color
+  box-shadow: inset -1px 2px 2px $wb-shadow, 6px 9px 1px rgba(0, 0, 0, 0.1)
+  overflow: hidden
+
 H2 {
   font-family: 'Shadows Into Light', cursive;
+  text-decoration: underline;
 }
   .fakeimg {
     height: 200px;
     background: #aaa;
   }
+
+  .wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  flex: 0 0 auto;
+  display: flex;
+  color: #ccc;
+  margin: 1em;
+  padding: 1em;
+  width: 80%;
+  border-top: 1px solid blue;
+  justify-content: center;
+}
+
+footer i {
+  padding: 1em;
+}
 
   </style>
 </head>
@@ -110,32 +146,43 @@ H2 {
   </div>
 </nav>
 
-<div class="container" style="margin-top:30px">
-  <div class="row">
-    <div class="col-sm-4">
-      <h2>TODO</h2>
-      <div class="sticker">
-        <span class="text">Hello ))</span>
+
+<div class="container-fluid" style="margin:50px;">
+
+  <div class="row" style="margin: 0 auto; width: 100%;">
+
+      <div class="col-sm-4">
+        <h2>TO DO</h2>
+        <div class="sticker">
+          <span class="text">Hello ))</span>
+        </div>
       </div>
-      <hr class="d-sm-none">
-    </div>
-    <div class="col-sm-4">
-      <h2>In Progress</h2>
-      <div class="sticker">
-        <span class="text">9 August 14</span>
+      <div class="col-sm-4">
+        <h2>In Progress</h2>
+        <div class="sticker">
+          <span class="text">9 August 14</span>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <h2>Done</h2>
+        <div class="sticker">
+          <span class="text">Hard task</span>
+        </div>
       </div>
     </div>
-    <div class="col-sm-4">
-      <h2>Done</h2>
-      <div class="sticker">
-        <span class="text">Hard task</span>
-      </div>
-    </div>
-  </div>
 </div>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Footer</p>
+<!--<div class="jumbotron text-center" style="margin-bottom:0">-->
+<!--  <p>Footer</p>-->
+<!--</div>-->
+
+<div class="wrapper">
+  <footer>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-twitch"></i></a>
+  </footer>
 </div>
 
 </body>
