@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="app">
+  <Sticker
+  v-for="(todo) in todos"
+  v-bind:mess="todo"/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Sticker from './components/Sticker.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Sticker
+  },
+  data() {
+      return {
+        todos: [
+          'todo 1',
+          'todo 2',
+          'todo 3'
+        ]
+      }
+    },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
