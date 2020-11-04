@@ -75,16 +75,3 @@ footer i {
   padding: 1em;
 }
 
-.white-board {
-  background-color: #e9ecef
-  position: relative
-  width: 80%
-  height: 80%
-  border-radius: 5px
-  border: 10px solid #e9ecef
-  /*box-shadow: inset -1px 2px 2px $wb-shadow, 6px 9px 1px rgba(0, 0, 0, 0.1) */
-  overflow: hidden
-}
-
-
-
