@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
+
+body {
+    /* center the element
+    margin-right: auto;
+    margin-left: auto; */
+}
+
+header {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+    text-align: center;
+}
+
+nav {
+
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    background-color: #343a40!important;
+
+}
+
+nav ul {
+    margin: 0;
+    padding: 4px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 5px;
+    padding: 3px;
+    color: rgba(255,255,255,.5);
+}
+
+nav ul li a {
+    color: rgba(255,255,255,.5);
+}
+
+main {
+    margin: 50px;
+    display: flex;
+}
+
+section {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+section H2 {
+  font-family: 'Shadows Into Light', cursive;
+  text-decoration: underline;
+}
+
+footer {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    border-top: 1px solid blue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer i {
+  padding: 1em;
+}
+
+.white-board {
+  background-color: #e9ecef
+  position: relative
+  width: 80%
+  height: 80%
+  border-radius: 5px
+  border: 10px solid #e9ecef
+  /*box-shadow: inset -1px 2px 2px $wb-shadow, 6px 9px 1px rgba(0, 0, 0, 0.1) */
+  overflow: hidden
+}
+
+
+
