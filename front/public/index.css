@@ -75,3 +75,23 @@ footer i {
   padding: 1em;
 }
 
+.btn {
+  margin-left:1em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  padding: 0em;
+  height: 2em;
+  line-height: 2em;
+  width: 2em;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+   background: #4CCA50;
+}

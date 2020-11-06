@@ -36,7 +36,8 @@ export default {
 
 <style scoped>
 main {
-  margin: 50px;
+  /*margin: 50px;*/
+  margin: 0px;
   display: flex;
 }
 
