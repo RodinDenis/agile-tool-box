@@ -1,12 +1,18 @@
 <template>
-  <div id="app">
-    <div>
-      <h2>TO DO</h2>
+  <main id="app">
+    <section>
+      <h2>TODO</h2>
       <Sticker
           v-for="sticker in stickers" :key="sticker.message"
           v-bind:msg="sticker.message"/>
-    </div>
-  </div>
+    </section>
+    <section>
+      <h2>IN PROGRESS</h2>
+    </section>
+    <section>
+      <h2>Done</h2>
+    </section>
+  </main>
 </template>
 
 <script>
@@ -27,3 +33,16 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+main {
+  margin: 50px;
+  display: flex;
+}
+
+section {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+</style>
