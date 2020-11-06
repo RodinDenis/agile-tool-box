@@ -1,13 +1,13 @@
 <template>
-  <div id="stick" class="sticker">
-     <span class="text">{{ mess }}</span>
+  <div class="sticker">
+    <span class="text">{{ msg }}</span>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Sticker',
-   props: ['mess']
+  props: ['msg']
 }
 
 </script>
@@ -25,13 +25,11 @@ export default {
   margin: 30px;
   background-color: #fcf59b;
   border-radius: 0px 10px 250px / 0 200px 55px 250px;
-  -webkit-box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.3);
-  -moz-box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.3);
-  box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.3);
-  //-ms-transform: rotateZ(-4deg);
-  //-webkit-transform: rotateZ(-4deg);
-  //transform: rotateZ(-4deg);
+  -webkit-box-shadow: -3px 5px 12px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -3px 5px 12px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: -3px 5px 12px 0 rgba(0, 0, 0, 0.3);
 }
+
 /* Text on the sticker*/
 .text {
   text-align: center;
@@ -49,15 +47,16 @@ export default {
   z-index: -1;
   width: 90%;
   height: 20px;
-  -webkit-box-shadow: 3px 17px 6px rgba(0,0,0,.3);
-  -moz-box-shadow: 3px 17px 6px rgba(0,0,0,.3);
-  box-shadow: 3px 17px 6px rgba(0,0,0,.3);
+  -webkit-box-shadow: 3px 17px 6px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 3px 17px 6px rgba(0, 0, 0, .3);
+  box-shadow: 3px 17px 6px rgba(0, 0, 0, .3);
   bottom: 15px;
   right: 5px;
-  -ms-transform: skew(-10deg,2deg);
-  -webkit-transform: skew(-10deg,2deg);
-  transform: skew(-10deg,2deg);
+  -ms-transform: skew(-10deg, 2deg);
+  -webkit-transform: skew(-10deg, 2deg);
+  transform: skew(-10deg, 2deg);
 }
+
 /* Curl */
 .sticker::after {
   content: '';
@@ -69,7 +68,7 @@ export default {
   bottom: 1px;
   border-top: 10px solid rgb(156, 166, 61);
   border-right: 10px solid transparent;
-  -webkit-transform: skew(-55deg,10deg);
-  transform: skew(-55deg,10deg);
+  -webkit-transform: skew(-55deg, 10deg);
+  transform: skew(-55deg, 10deg);
 }
 </style>

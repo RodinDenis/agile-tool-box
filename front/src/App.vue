@@ -1,8 +1,11 @@
 <template>
-<div id="app">
-  <Sticker
-  v-for="(todo) in todos"
-  v-bind:mess="todo"/>
+  <div id="app">
+    <div>
+      <h2>TO DO</h2>
+      <Sticker
+          v-for="sticker in stickers" :key="sticker.message"
+          v-bind:msg="sticker.message"/>
+    </div>
   </div>
 </template>
 
@@ -15,17 +18,12 @@ export default {
     Sticker
   },
   data() {
-      return {
-        todos: [
-          'todo 1',
-          'todo 2',
-          'todo 3'
-        ]
-      }
-    },
+    return {
+      stickers: [
+        {message: 'todo1'},
+        {message: 'todo2'}
+      ]
+    }
+  },
 }
 </script>
-
-<style>
-
-</style>
