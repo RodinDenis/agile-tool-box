@@ -34,16 +34,3 @@ export default {
 }
 </script>
 
-<style scoped>
-main {
-  /*margin: 50px;*/
-  margin: 0px;
-  display: flex;
-}
-
-section {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-}
-</style>
