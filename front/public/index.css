@@ -46,6 +46,10 @@ nav ul li a {
     color: rgba(255,255,255,.5);
 }
 
+nav ul li a:hover {
+   color: #ffffff;
+}
+
 main {
     margin: 50px;
     display: flex;

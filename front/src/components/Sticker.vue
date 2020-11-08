@@ -30,6 +30,13 @@ export default {
   box-shadow: -3px 5px 12px 0 rgba(0, 0, 0, 0.3);
 }
 
+.sticker:hover {
+
+   -webkit-box-shadow: -5px 10px 12px 0 rgba(0, 0, 0, 0.3);
+   -moz-box-shadow: -5px 10px 12px 0 rgba(0, 0, 0, 0.3);
+   box-shadow: -5px 10px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
 /* Text on the sticker*/
 .text {
   text-align: center;
