@@ -5,7 +5,10 @@
              @drop="onDrop($event,dashboard.id)"
              class="droppable"
              @dragover.prevent
-             @dragenter.prevent>
+             @dragenter.prevent
+             @dragenter="dragEnter"
+             @dragend="dragEnd"
+             @dragleave="dragLeave">
       <h4>{{ dashboard.title }}</h4>
       <Sticker v-for="sticker in stickers.filter(x => x.dashboardId===dashboard.id)"
                :key="sticker.id"
@@ -63,6 +66,18 @@ export default {
       }
     ])
 
+    function dragEnd() {
+      this.classList.remove('over');
+    }
+
+    function dragEnter(e) {
+      e.target.classList.add('over');
+    }
+
+    function dragLeave(e) {
+      e.target.classList.remove('over');
+    }
+
     function onDragStart(e, sticker) {
       e.dataTransfer.dropEffect = 'move'
       e.dataTransfer.effectAllowed = 'move'
@@ -76,12 +91,16 @@ export default {
           x.dashboardId = dashboardId
         return x
       })
+      e.target.classList.remove('over');
     }
 
     return {
       stickers,
       dashboards,
       onDragStart,
+      dragLeave,
+      dragEnter,
+      dragEnd,
       onDrop
     }
   },
@@ -101,6 +120,15 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+section.over {
+ /* border: 3px dotted #666; */
+  border-width: 3px;
+  border-style: dashed;
+  border-radius: 1em;
+  border-width: 0.09 rem;
+  border-color: #666;
 }
 
 main {
