@@ -1,13 +1,13 @@
 <template>
   <main class="column column-center">
       <section class="row">
-            <section class="column column-center">
+            <section class="column column-center colored-section">
                 <h4>SPRINTS</h4>
             </section>
             <section v-for="dashboard in dashboards"
                  :key="dashboard.id"
                  @drop="onDrop($event,dashboard.id)"
-                 class="droppable column"
+                 class="droppable column column-center colored-section"
                  @dragover.prevent
                  @dragenter.prevent
                  @dragenter="dragEnter"
@@ -26,7 +26,7 @@
             </section>
       </section>
 
-      <section class="column column-center">
+      <section class="column column-center colored-section">
         <h4>BACKLOG</h4>
         <div class="btn">+</div>
       </section>
@@ -129,7 +129,10 @@ section {
   margin: 1rem;
   width: 100%;
   text-align: center;
-  background-color: #e9ecef;
+}
+
+.colored-section {
+    background-color: #e9ecef;
 }
 
 section.over {
