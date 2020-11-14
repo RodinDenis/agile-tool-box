@@ -114,12 +114,13 @@ export default {
 <style scoped>
 
 section {
-  margin: 0 auto;
+  margin: 1rem;
   width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: #e9ecef;
 }
 
 section.over {
