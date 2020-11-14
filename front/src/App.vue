@@ -1,19 +1,13 @@
 <template>
-  <div>
-    <SprintGoal/>
-    <Dashboard/>
+  <div id="app">
+    <hr>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import SprintGoal from './components/SprintGoal'
-import Dashboard from './components/Dashboard.vue'
-
 export default {
-  name: 'App',
-  components: {
-    SprintGoal, Dashboard
-  }
+  name: 'App'
 }
 </script>
 
