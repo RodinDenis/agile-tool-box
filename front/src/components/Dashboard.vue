@@ -1,23 +1,35 @@
 <template>
-  <main>
-    <section v-for="dashboard in dashboards"
-             :key="dashboard.id"
-             @drop="onDrop($event,dashboard.id)"
-             class="droppable"
-             @dragover.prevent
-             @dragenter.prevent
-             @dragenter="dragEnter"
-             @dragend="dragEnd"
-             @dragleave="dragLeave">
-      <h4>{{ dashboard.title }}</h4>
-      <Sticker v-for="sticker in stickers.filter(x => x.dashboardId===dashboard.id)"
-               :key="sticker.id"
-               v-bind:msg="sticker.title"
-               @dragstart="onDragStart($event, sticker)"
-               class="draggable"
-               draggable="true">
-      </Sticker>
-    </section>
+  <main class="column column-center">
+      <section class="row">
+            <section class="column column-center">
+                <h4>SPRINTS</h4>
+            </section>
+            <section v-for="dashboard in dashboards"
+                 :key="dashboard.id"
+                 @drop="onDrop($event,dashboard.id)"
+                 class="droppable column"
+                 @dragover.prevent
+                 @dragenter.prevent
+                 @dragenter="dragEnter"
+                 @dragend="dragEnd"
+                 @dragleave="dragLeave">
+
+                <h4>{{ dashboard.title }}</h4>
+
+                <Sticker v-for="sticker in stickers.filter(x => x.dashboardId===dashboard.id)"
+                       :key="sticker.id"
+                       v-bind:msg="sticker.title"
+                       @dragstart="onDragStart($event, sticker)"
+                       class="draggable"
+                       draggable="true">
+                </Sticker>
+            </section>
+      </section>
+
+      <section class="column column-center">
+        <h4>BACKLOG</h4>
+        <div class="btn">+</div>
+      </section>
   </main>
 </template>
 
@@ -117,9 +129,6 @@ section {
   margin: 1rem;
   width: 100%;
   text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   background-color: #e9ecef;
 }
 
@@ -135,6 +144,6 @@ section.over {
 main {
   /*margin: 50px;*/
   margin: 0px;
-  display: flex;
+  //display: flex;
 }
 </style>
