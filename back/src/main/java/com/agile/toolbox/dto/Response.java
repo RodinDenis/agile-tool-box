@@ -1,7 +1,10 @@
 package com.agile.toolbox.dto;
 
+import lombok.Getter;
+
 import java.util.List;
 
+@Getter
 public class Response <T> {
 
     private List<T> data;
