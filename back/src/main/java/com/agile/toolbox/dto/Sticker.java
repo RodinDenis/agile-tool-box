@@ -1,10 +1,8 @@
 package com.agile.toolbox.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter
 public class Sticker {
 
     private long id;

@@ -1,10 +1,8 @@
 package com.agile.toolbox.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter
 public class Backlog {
 
     private long id;
