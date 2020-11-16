@@ -1,14 +1,26 @@
 <template>
-  <div class="sticker">
-    <span class="text">{{ msg }}</span>
+  <div class="draggable sticker"
+       @dragstart="onDragStart($event)"
+       draggable="true">
+    <span class="text">{{ sticker.title }}</span>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Sticker',
-  props: ['msg']
+  props: {
+    sticker: Object
+  },
+  methods: {
+    onDragStart(e) {
+      e.dataTransfer.dropEffect = 'move'
+      e.dataTransfer.effectAllowed = 'move'
+      e.dataTransfer.setData('stickerId', this.sticker.id.toString())
+    }
+  }
 }
+
 
 </script>
 
@@ -32,9 +44,9 @@ export default {
 
 .sticker:hover {
 
-   -webkit-box-shadow: -5px 10px 12px 0 rgba(0, 0, 0, 0.3);
-   -moz-box-shadow: -5px 10px 12px 0 rgba(0, 0, 0, 0.3);
-   box-shadow: -5px 10px 12px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -5px 10px 12px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -5px 10px 12px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: -5px 10px 12px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Text on the sticker*/

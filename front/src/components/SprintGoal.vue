@@ -1,8 +1,15 @@
 <template>
-  <h2 id="sprint-goal"><i>Sprint Goal</i>: Create a whiteboard with moving stickers</h2>
+  <h2 id="sprint-goal">
+    {{sprintGoal}}
+  </h2>
 </template>
 
 <script>
+export default {
+  props:{
+    sprintGoal:String
+  }
+}
 </script>
 
 <style scoped>

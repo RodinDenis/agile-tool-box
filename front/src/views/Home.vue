@@ -7,7 +7,7 @@
 
 <script>
 import SprintGoal from '../components/SprintGoal'
-import Dashboard from '../components/Dashboard.vue'
+import Dashboard from '../components/dashboard/Dashboard.vue'
 
 export default {
   components: {
